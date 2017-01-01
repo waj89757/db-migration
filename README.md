@@ -3,11 +3,11 @@ This project is a distributed migration service for mysql.It includes full data 
 
 ##Flow Chart
 
-![flow-chart](https://github.com/waj89757/db-migration/blob/master/readme/架构图.jpg)
+![flow-chart](https://github.com/waj89757/db-migration/blob/master/readme/迁移流程.jpg)
 
 
 ##System Frame
-![frame](https://github.com/waj89757/db-migration/blob/master/readme/迁移流程.jpg)
+![frame](https://github.com/waj89757/db-migration/blob/master/readme/架构图.jpg)
 
 
 ##Full data migration
@@ -45,7 +45,7 @@ It start from binlog position when full data check finished.
 Subscribing target and master,Comparing binlog data in a certian range.</br>
 Incre data service log target and master binlog position and notify the incre data check to consume these.
 
-##Distrubtion and recovery
+##Distribution and recovery
 Migration Services use master-slave frame.The master node allocate schedules and transfer the fail task.</br>
 Slave node will report progress to master and master save progress.If slave fail,master will choose another node to continue task from the point of interruption.
 
