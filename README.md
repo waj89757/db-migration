@@ -22,9 +22,9 @@ For one table data, We divide it into some chunks by index and run some threads 
 
 ##Incrmental data migration
 ####1.log the binlog position
-Incre service starts by a position which logged by full data task.
+Incre service starts by a position which is logged by full data task.
 ####2.catch incre data
-We enhanced canal which a mysql binlog server.Incre service can subscribes binlog position and catches up data from canal by RPC.
+We enhanced canal which is a mysql binlog server.Incre service can subscribes binlog position and catches up data from canal by RPC.
 ####3.performance
 We choose one thread for one db task in order to the data sequence.We batch pull data and process data to increase performance.
 
